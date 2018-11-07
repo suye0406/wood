@@ -1,0 +1,126 @@
+import Vue from 'vue'
+import Vuex,{Store} from 'vuex'
+
+Vue.use(Vuex);
+
+var store = new Store({
+  state: {
+    twosowingmap:[
+      {
+        img:'../../../static/img/Popular/popular-1.jpeg',
+        title:'飞鸟沙发',
+        price:'2185',
+        content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
+        path:'/404',
+      },
+      {
+        img:'../../../static/img/Popular/popular-2.jpeg',
+        title:'飞鸟沙发',
+        price:'2185',
+        content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
+        path:'/404',
+      },
+      {
+        img:'../../../static/img/Popular/popular-3.jpeg',
+        title:'飞鸟沙发',
+        price:'2185',
+        content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
+        path:'/404',
+      },
+      {
+        img:'../../../static/img/Popular/popular-4.jpeg',
+        title:'飞鸟沙发',
+        price:'2185',
+        content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
+        path:'/404',
+      },
+      {
+        img:'../../../static/img/Popular/popular-5.jpeg',
+        title:'飞鸟沙发',
+        price:'2185',
+        content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
+        path:'/404',
+      },
+      {
+        img:'../../../static/img/Popular/popular-6.jpeg',
+        title:'飞鸟沙发',
+        price:'2185',
+        content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
+        path:'/404',
+      },
+    ],
+    newmap:[
+      {
+        img:'../../../static/img/newmap/new-1.jpeg',
+        title:'飞鸟沙发',
+        price:'2185',
+        content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
+        path:'/404',
+      },
+      {
+        img:'../../../static/img/newmap/new-2.jpeg',
+        title:'飞鸟沙发',
+        price:'2185',
+        content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
+        path:'/404',
+      },
+      {
+        img:'../../../static/img/newmap/new-3.jpeg',
+        title:'飞鸟沙发',
+        price:'2185',
+        content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
+        path:'/404',
+      },
+      {
+        img:'../../../static/img/newmap/new-4.jpeg',
+        title:'飞鸟沙发',
+        price:'2185',
+        content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
+        path:'/404',
+      },
+      {
+        img:'../../../static/img/newmap/new-5.jpeg',
+        title:'飞鸟沙发',
+        price:'2185',
+        content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
+        path:'/404',
+      },
+    ],
+    all:[
+      {
+        img:'../../../static/img/banner/沙发.jpeg',
+        three:'三人',
+        double:'双人',
+        single:'单人',
+        person:'大三人',
+        more:'更多',
+        title:'沙发 SOFA',
+        path:'/404',
+      },
+    ],
+    allpic:[
+      {
+        img:'../../../static/img/产品图/沙发/大三人沙发/竖琴全幅沙发.png',
+        title:'竖琴全幅沙发',
+        path:'/404',
+      },
+      {
+        img:'../../../static/img/产品图/沙发/三人沙发/贝岛沙发.png',
+        title:'贝岛沙发',
+        path:'/404',
+      },
+      {
+        img:'../../../static/img/产品图/沙发/双人沙发/云团沙发.png',
+        title:'云团沙发',
+        path:'/404',
+      },
+      {
+        img:'../../../static/img/产品图/沙发/单人沙发/云团沙发.png',
+        title:'云团沙发',
+        path:'/404',
+      }
+    ]
+  }
+});
+
+export default store;
