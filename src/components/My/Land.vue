@@ -15,26 +15,29 @@
           <div class="swiper-slide" style="">
             <div class=""style="width: 67.8%;margin: 0 auto;">
               <div>
-                <p class="title">快捷登陆</p>
+                <p class="title"style="display: flex;justify-content: space-between"><span>快捷登陆</span><span style="font-size: 1.2rem;">⬅请左右滑动➡</span></p>
                 <div>
-                  <input type="text"placeholder="请输入手机号"class="username"v-model="username"@keyup="user"><span>{{use}}</span>
+                  <input type="text"placeholder="请输入手机号"class="username"v-model="username"@keyup="user">
+                  <!--<span>{{use}}</span>-->
                 </div>
                 <div style="margin-bottom: 1.4rem;">&nbsp;</div>
                 <div>
                   <input type="text"placeholder="请输入验证码"class="code"v-model="code">
-                  <div class="btn-code"@click="vcode">发送验证码</div>
+                  <div class="btn-code"@click=""v-show="vco">发送验证码</div>
+                  <div class="btn-code"@click="vcode"v-show="vc"style="border:.1rem solid black;color: black;">发送验证码</div>
                   <span style="position:absolute;right: 10rem;top: 14.5rem;display: none">{{num}}</span>
                 </div>
-                <input type="submit" value="登陆" class="submit"/>
+                <input type="button" value="登陆" class="submit"@click=""style=""v-show="falg"/>
+                <input type="button" value="登陆" class="submit"@click="kl"style="color: #fff;background-color: #409eff;border-color: #409eff;"v-show="fal"/>
               </div>
             </div>
           </div>
           <div class="swiper-slide" style="">
             <div class=""style="width: 67.8%;margin: 0 auto;">
               <div>
-                <p class="title">账号密码登陆</p>
+                <p class="title"style="display: flex;justify-content: space-between"><span>账号密码登陆</span><span style="font-size: 1.2rem;">⬅请左右滑动➡</span></p>
                 <div>
-                  <input type="text"placeholder="请输入手机号"class="username"v-model="username"@keyup="user">
+                  <input type="text"placeholder="请输入手机号"class="username"v-model="username"@keyup="">
                 </div>
                 <div style="margin-bottom: 1.4rem;">&nbsp;</div>
                 <div>
@@ -47,7 +50,7 @@
           <div class="swiper-slide" style="">
             <div class=""style="width: 67.8%;margin: 0 auto;">
               <div>
-                <p class="title">快速注册</p>
+                <p class="title"style="display: flex;justify-content: space-between"><span>快速注册</span><span style="font-size: 1.2rem;">⬅请左右滑动➡</span></p>
                 <div>
                   <input type="text"placeholder="请输入手机号"class="username"v-model="username"@keyup="regis"style="margin-bottom: -1rem">
                 </div>
@@ -57,8 +60,8 @@
                 </div>
                 <div>
                   <input type="text"placeholder="请输入验证码"class="code"v-model="code"style="">
-                  <div class="btn-code"@click=""v-show="false">发送验证码</div>
-                  <div :class="btn-code"@click="vcode"style="border: .1rem solid black;">发送验证1码</div>
+                  <div class="btn-code"@click="rcode"v-show="true">发送验证码</div>
+                  <!--<div :class="btn-code"@click="vcode"style="border: .1rem solid black;">发送验证1码</div>-->
                   <span style="position:absolute;right: 10rem;top: 14.5rem;display: none">{{num}}</span>
                 </div>
                 <input type="button" value="注册" class="submit"@click="register"/>
@@ -85,14 +88,25 @@
         num:60,
         password:'',
         use:11,
-
+        kl:'',
+        falg:true,
+        fal:false,
+        vco:true,
+        vc:false,
       }
     },
     methods:{
       user(){
-        this.use = this.use - this.username.length
-        if (this.username == /^1[34578]\d{9}$/){
-          console.log(2)
+        if (this.username == ""){
+          this.falg = true;
+          this.fal = false;
+          this.vco = true;
+          this.vc = false;
+        } else {
+          this.falg = false;
+          this.fal = true;
+          this.vco = false;
+          this.vc = true;
         }
       },
       vcode(){
@@ -110,14 +124,31 @@
           type:"get",
           url: 'http://10.9.12.91:8080/user/login?username='+this.username+'?password='+this.password,
           success : function (result) {
-
+            console.log(result);
           }
         })
       },
 
-      //注册
+      rcode(){
+        console.log(this.username)
+        axios({
+          type:"get",
+          url : "http://10.9.12.91:8080/user/getcode?username="+this.username,
+          success:function (result) {
+            console.log(this.username)
+          }
+        })
+      },
       register(){
-
+        console.log(this.username,this.password,this.code)
+        axios({
+          type:"get",
+          url : "http://10.9.12.91:8080/user/getcode?username="+this.username+'?password'+this.password+'?code='+this.code,
+          success:function (result) {
+            console.log(this.username)
+            console.log(result)
+          }
+        })
       },
       regis(){
         //按下后判断

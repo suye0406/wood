@@ -9,18 +9,18 @@
       <div class="cl col-lg-12">
         <div class="col-lg-12">
           <div class="" style="width:40%;margin-left: 20vh;margin-bottom: 1vh;">
-            <el-input placeholder="请输入商品名称"style="opacity: .7;"></el-input>
+            <el-input placeholder="请输入商品名称"v-model="name" style="opacity: .7;"></el-input>
           </div>
         </div>
         <div style="float: left;margin-left: 20vh">
           <el-radio-group v-model="radio1">
-            <el-radio :label="1"><span @click="sofaOne">沙发</span></el-radio>
-            <el-radio :label="2"><span @click="tableTwo">桌几</span></el-radio>
-            <el-radio :label="3"><span @click="chairThree">椅凳</span></el-radio>
+            <el-radio v-for="(item,index) in title":label="item.id"@click="item.id">
+              <span>{{item.name}}</span>
+            </el-radio>
           </el-radio-group>
           <div class="block"style="">
             <el-date-picker
-              v-model="value1"
+              v-model="pubdate"
               type="date"
               placeholder="选择日期">
             </el-date-picker>
@@ -38,7 +38,7 @@
         <div class="el-textarea"style="width: 40%;
     display: block;
     margin-left: 20vh;">
-          <textarea autocomplete="off" class="el-textarea__inner" style="min-height: 33px;"placeholder="请输入商品介绍20个字符"></textarea>
+          <textarea autocomplete="off" class="el-textarea__inner" v-model="intro" style="min-height: 33px;"placeholder="请输入商品介绍20个字符"></textarea>
         </div>
       </div>
       <div class="cl col-lg-12"v-show="sofa">
@@ -80,7 +80,7 @@
     </div>
     <div class="col-lg-12">
       <el-upload
-        action="https://jsonplaceholder.typicode.com/posts/"
+        action=""
         list-type="picture-card"
         style="float: left;margin-left: 20vh;margin-top: 5vh;opacity: .7">
         <i class="el-icon-plus"></i>
@@ -119,40 +119,50 @@
         table:false,
         chair:false,
         dialogImageUrl:'',
+        name:'',
+        intro:'',
         price:'99.99',
         pickerOptions1: {
           disabledDate(time) {
             return time.getTime() > Date.now();
           },
         },
-        value1: '',
+        pubdate: '',
         value2: '',
         title:'',
       };
     },
     methods:{
-      sofaOne(){
+      1(){
         this.sofa = true;
         this.table = false;
         this.chair = false;
       },
-      tableTwo(){
+      2(){
         this.sofa = false;
         this.table = true;
         this.chair = false;
       },
-      chairThree(){
+      3(){
         this.sofa = false;
         this.table = false;
         this.chair = true;
       },
       send(){
-        console.log(this.radio2)
+        console.log(this.title.id)
+        axios({
+          type : "get", //提交方式
+          url : "http://10.9.12.46:8080/goods/addGoods?name="+this.name+'?intro='+this.intro+'?color='+this.radio4+'?price='+this.price+'?typeid='+this.title.idw+'?pubdate='+this.pubdate+'?img='+this.dialogImageUrl+'?style='+this.radio5,
+          success : function(result) {//返回数据根据结果进行相应的处理
+            console.log(result)
+          }
+        });
       },
     },
     created() {
       axios.get('http://10.9.12.98:8080/goodstype/goodstypelist?level=1').then(res=>{
-        this.title = res
+        this.title = res.data.data
+        console.log(this.title)
       }).catch(error=>console.log(error));
     }
   }
