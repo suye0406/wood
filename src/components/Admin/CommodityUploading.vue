@@ -46,29 +46,29 @@
             <!---->
           </div>
         </div>
-        <!--<div class="el-form-item">-->
-          <!--<label class="el-form-item__label" style="width: 80px;">上传日期</label>-->
-          <!--<div class="el-form-item__content" style="margin-left: 80px;">-->
-            <!--<div class="el-input">-->
-              <!--&lt;!&ndash;&ndash;&gt;-->
-              <!--<input type="text" autocomplete="off" class="el-input__inner"name="pubdate">-->
-              <!--&lt;!&ndash;&ndash;&gt;&lt;!&ndash;&ndash;&gt;&lt;!&ndash;&ndash;&gt;-->
-            <!--</div>-->
-            <!--&lt;!&ndash;&ndash;&gt;-->
-          <!--</div>-->
-        <!--</div>-->
         <div class="el-form-item">
-          <label class="el-form-item__label" style="width: 80px;">商品类型</label>
+          <label class="el-form-item__label" style="width: 80px;">上传日期</label>
           <div class="el-form-item__content" style="margin-left: 80px;">
             <div class="el-input">
               <!---->
-              <input type="text" autocomplete="off" class="el-input__inner"name="typeid"placeholder="分类：沙发，桌几，椅凳">
+              <input type="text" autocomplete="off" class="el-input__inner"name="pubdate">
               <!----><!----><!---->
             </div>
             <!---->
           </div>
         </div>
         <div class="el-form-item">
+          <label class="el-form-item__label" style="width: 80px;">商品类型</label>
+          <select style="float: left;width: 100px;height: 30px;">
+            <option v-for="item in list" :value="item.id">{{item.name}}</option>
+          </select>
+          <select style="float: left;width: 100px;height: 30px;"name="typeid">
+            <option value="">单人</option>
+            <option value="">双人</option>
+            <option value="">三人</option>
+          </select>
+        </div>
+          <div class="el-form-item">
           <label class="el-form-item__label" style="width: 80px;">商品图片</label>
           <div class="el-form-item__content" style="margin-left: 80px;">
             <div class="el-input">
@@ -121,9 +121,44 @@
   export default {
     data(){
       return{
-
+        lis: [
+          {
+            id:'1',
+            name:'沙发',
+          },
+          {
+            id:'2',
+            name:'桌几',
+          }
+        ],
+        list:'',
+        pickerOptions1: {
+          disabledDate(time) {
+            return time.getTime() > Date.now();
+          },
+        },
+        value1:'',
       }
     },
-
+    methods:{
+      // send(){
+      //   console.log(this.value1);
+      //   axios({
+      //     method:"post",
+      //     url:"http://10.9.12.46:8080/goods/addGoods",
+      //     data:{
+      //       pubdatepubdate:this.value1,
+      //     }
+      //   }).then((res)=>{
+      //     console.log(res.data);
+      //   });
+      // },
+    },
+    created() {
+      axios.get('http://10.9.12.98:8080/goodstype/goodstypelist?level=1').then(res=>{
+        this.list = res.data.data
+        console.log(this.list)
+      }).catch(error=>console.log(error));
+    }
   }
 </script>

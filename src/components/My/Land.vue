@@ -143,7 +143,8 @@
         console.log(this.username,this.password,this.code)
         axios({
           type:"get",
-          url : "http://10.9.12.91:8080/user/getcode?username="+this.username+'?password'+this.password+'?code='+this.code,
+          // http://localhost:8080/user/register?username=15830913577&password=123456&code=950899
+          url:"http://10.9.12.91:8080/user/register?username="+this.username+"&password="+this.password+"&code="+this.code,
           success:function (result) {
             console.log(this.username)
             console.log(result)
