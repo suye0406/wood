@@ -1,31 +1,107 @@
 <template>
-    <div id="About"></div>
+  <div id="About">
+    <div class="col-lg-12"style="height: 2rem;display: flex;margin-bottom:6.8rem;">
+      <p style="width: 1rem;height: 1.6rem;margin-left: 1.6rem;margin-top: 1rem">
+        <img src="../../../static/img/二倍率icon切图/Back@2x.png" height="100%" width="100%"/>
+      </p>
+      <p style="margin-top: 1rem;font-weight: bold;text-align: center;">
+        <span style="margin: 0 auto;text-align: center;display: block;margin-left: 12rem;">关于WOOD</span>
+      </p>
+    </div>
+    <div style="width: 5.6rem;height: 7.7rem;margin: 0 auto;">
+      <img src="../../../static/img/二倍率icon切图/logo2@2x.png" height="100%" width="100%"/>
+    </div>
+    <div style="height: 8rem;"class="col-lg-12"></div>
+    <div class="classlist col-lg-12">
+      <div style="margin-top: 4.6rem;"></div>
+      <div class="collection col-lg-12"v-for="(item,index) in menu">
+        <!--<router-link :to="item.path"style="display: flex;justify-content: space-between;">-->
+        <router-link :to="item.path">
+          <div style="display: flex;">
+            <p>
+              <img :src="item.icon" height="100%" width="100%"/>
+            </p>
+            <span>
+          {{item.stitle}}
+        </span>
+          </div>
+        </router-link>
+        <div>
+          <span style="width:.8rem;height: 1.2rem;margin-right: 2rem;margin-top: -.1rem;">
+        <img :src="item.iconpic" height="100%" width="100%"/>
+        </span>
+        </div>
+        <!--</router-link>-->
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "About"
+  export default {
+    data(){
+      return{
+        menu:[
+          {
+            // icon:'../../../static/img/二倍率icon切图/collection@2x.png',
+            stitle:'了解造作：About Us',
+            iconpic:'../../../static/img/二倍率icon切图/right@2x.png',
+            path:'/404'
+          },
+          {
+            // icon:'../../../static/img/二倍率icon切图/location@2x.png',
+            stitle:'金剑2.0 🐮：🐂',
+            iconpic:'../../../static/img/二倍率icon切图/right@2x.png',
+            path:'/address'
+          },
+          {
+            // icon:'../../../static/img/二倍率icon切图/data@2x.png',
+            stitle:'官方微博：WOOD官网',
+            iconpic:'../../../static/img/二倍率icon切图/right@2x.png',
+            path:'/404'
+          },
+          {
+            // icon:'../../../static/img/二倍率icon切图/security@2x.png',
+            stitle:'分享WOOD：给身边的好朋友',
+            iconpic:'../../../static/img/二倍率icon切图/right@2x.png',
+            path:'/404'
+          },
+          // {
+          //   icon:'../../../static/img/二倍率icon切图/collection@2x.png',
+          //   stitle:'通用设置',
+          //   iconpic:'../../../static/img/二倍率icon切图/right@2x.png',
+          //   path:'/404'
+          // },
+          // {
+          //   icon:'../../../static/img/二倍率icon切图/about@2x.png',
+          //   stitle:'关于WOOD',
+          //   iconpic:'../../../static/img/二倍率icon切图/right@2x.png',
+          //   path:'/about'
+          // },
+        ]
+      }
     }
+  }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+  #About{
+    .classlist{
+      .collection{
+        display: flex;
+        justify-content: space-between;
+        p{
+          width: 2rem;
+          height: 2rem;
+          margin: 0 1.6rem 3.4rem 1.6rem;
+        }
+        span{
+          display: block;
+          line-height: 2rem;
+          margin-top: .1rem;
+          color: black;
+        }
+      }
+    }
+  }
 </style>
-
-<!--
-苏雨辰：关于造作+个人资料+个人资料选择生日+个人资料选择性别，分享到，通用设置，登陆注册
-金剑：打小报告，已完成订单+已付款订单+其他渠道,确认订单，
-唐文斌：详情页,
-王博：购物车,选择规格，搜索，
-王国梁：首页分类，账户安全，
-赵莉：添加新地址+收货地址+编辑地址分，
-海洋：发票信息+发票信息内容，
-熊紫汐：我的收藏+收藏列表，分类，
-
-苏雨辰：登陆注册
-金剑：订单
-王博：购物车
-赵莉：收货地址
-唐文斌，王国梁：商品，
-海洋，熊紫汐：商品分类
--->

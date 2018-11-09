@@ -100,7 +100,8 @@
           {
             icon:'../../../static/img/二倍率icon切图/about@2x.png',
             stitle:'关于WOOD',
-            iconpic:'../../../static/img/二倍率icon切图/right@2x.png'
+            iconpic:'../../../static/img/二倍率icon切图/right@2x.png',
+            path:'/about'
           },
         ]
       }

@@ -16,6 +16,8 @@ import CustomerService from '@/components/Admin/CustomerService'
 import DeliveryManagement from '@/components/Admin/DeliveryManagement'
 import Order from '@/components/Admin/Order'
 import Details from '@/components/Details/Details'
+import About from '@/components/My/About'
+import PersonalData from '@/components/My/PersonalData'
 
 Vue.use(Router)
 
@@ -55,6 +57,16 @@ export default new Router({
       path: '/my',
       name: 'My',
       component: My
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: About
+    },
+    {
+      path: '/personal',
+      name: 'PersonalData',
+      component: PersonalData
     },
 
     //后台管理

@@ -1,7 +1,7 @@
 <template>
   <div id="uploading">
     <div>
-      <form method="post" enctype="multipart/form-data" action="http://10.9.12.46:8080/goods/addGoods">
+      <form method="post" enctype="multipart/form-data" action="http://localhost:8080/goods/deleteGoodsById">
         <div class="el-form-item">
           <label class="el-form-item__label" style="width: 80px;">商品名称</label>
           <div class="el-form-item__content" style="margin-left: 80px;">
@@ -68,22 +68,22 @@
             <option value="">三人</option>
           </select>
         </div>
-          <div class="el-form-item">
-          <label class="el-form-item__label" style="width: 80px;">商品图片</label>
-          <div class="el-form-item__content" style="margin-left: 80px;">
-            <div class="el-input">
-              <!---->
-              <div tabindex="0" class="el-upload el-upload--text"style="display: flex;margin-left: 10%;">
-                <!--<i class="el-icon-plus avatar-uploader-icon"></i>-->
-                <input type="file" name="file" class="el-upload__input"style="display: block;margin-left: 10%;">
-                <input type="file" name="file" class="el-upload__input"style="display: block;">
-                <input type="file" name="file" class="el-upload__input"style="display: block;">
-              </div>
-              <!----><!----><!---->
-            </div>
-            <!---->
-          </div>
-        </div>
+          <!--<div class="el-form-item">-->
+          <!--<label class="el-form-item__label" style="width: 80px;">商品图片</label>-->
+          <!--<div class="el-form-item__content" style="margin-left: 80px;">-->
+            <!--<div class="el-input">-->
+              <!--&lt;!&ndash;&ndash;&gt;-->
+              <!--<div tabindex="0" class="el-upload el-upload&#45;&#45;text"style="display: flex;margin-left: 10%;">-->
+                <!--&lt;!&ndash;<i class="el-icon-plus avatar-uploader-icon"></i>&ndash;&gt;-->
+                <!--<input type="file" name="file" class="el-upload__input"style="display: block;margin-left: 10%;">-->
+                <!--<input type="file" name="file" class="el-upload__input"style="display: block;">-->
+                <!--<input type="file" name="file" class="el-upload__input"style="display: block;">-->
+              <!--</div>-->
+              <!--&lt;!&ndash;&ndash;&gt;&lt;!&ndash;&ndash;&gt;&lt;!&ndash;&ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash;&ndash;&gt;-->
+          <!--</div>-->
+        <!--</div>-->
         <div class="el-form-item">
           <label class="el-form-item__label" style="width: 80px;">商品款式</label>
           <div class="el-form-item__content" style="margin-left: 80px;">
@@ -155,9 +155,12 @@
       // },
     },
     created() {
-      axios.get('http://10.9.12.98:8080/goodstype/goodstypelist?level=1').then(res=>{
+      axios.get('http://10.9.32.239:8080/goodstype/goodstypelist?level=1').then(res=>{
         this.list = res.data.data
         console.log(this.list)
+      }).catch(error=>console.log(error));
+      axios.get('http://localhost:8080/goods/getGoodsDetailByNewTime').then(res=>{
+        console.log(res)
       }).catch(error=>console.log(error));
     }
   }

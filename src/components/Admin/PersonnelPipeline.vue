@@ -100,10 +100,15 @@
       }
     },
     created() {
-      axios.get('http://10.9.12.46:8080/goods/getGoodsDetailByNewTime').then(res=>{
-        console.log(res.data.data);
+      // axios.get('http://10.9.12.46:8080/goods/getGoodsDetailByNewTime').then(res=>{
+      //   console.log(res.data.data);
+      // }).catch(error=>console.log(error));
+
+      axios.get('http://localhost:8080/goods/getGoodsDetailByNewTime').then(res=>{
+        this.list = res.data.data
+        console.log(this.list)
       }).catch(error=>console.log(error));
-    }
+    },
   }
 </script>
 
