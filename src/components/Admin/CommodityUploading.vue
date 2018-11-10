@@ -1,7 +1,7 @@
 <template>
   <div id="uploading">
     <div>
-      <form method="post" enctype="multipart/form-data" action="http://localhost:8080/goods/deleteGoodsById">
+      <form method="post" enctype="multipart/form-data" action="http://10.9.65.191:8080/goods/addGoods">
         <div class="el-form-item">
           <label class="el-form-item__label" style="width: 80px;">商品名称</label>
           <div class="el-form-item__content" style="margin-left: 80px;">
@@ -51,7 +51,7 @@
           <div class="el-form-item__content" style="margin-left: 80px;">
             <div class="el-input">
               <!---->
-              <input type="text" autocomplete="off" class="el-input__inner"name="pubdate">
+              <input type="text" autocomplete="off" class="el-input__inner"name="date">
               <!----><!----><!---->
             </div>
             <!---->
@@ -63,27 +63,27 @@
             <option v-for="item in list" :value="item.id">{{item.name}}</option>
           </select>
           <select style="float: left;width: 100px;height: 30px;"name="typeid">
-            <option value="">单人</option>
+            <option value="4">单人</option>
             <option value="">双人</option>
             <option value="">三人</option>
           </select>
         </div>
-          <!--<div class="el-form-item">-->
-          <!--<label class="el-form-item__label" style="width: 80px;">商品图片</label>-->
-          <!--<div class="el-form-item__content" style="margin-left: 80px;">-->
-            <!--<div class="el-input">-->
-              <!--&lt;!&ndash;&ndash;&gt;-->
-              <!--<div tabindex="0" class="el-upload el-upload&#45;&#45;text"style="display: flex;margin-left: 10%;">-->
-                <!--&lt;!&ndash;<i class="el-icon-plus avatar-uploader-icon"></i>&ndash;&gt;-->
-                <!--<input type="file" name="file" class="el-upload__input"style="display: block;margin-left: 10%;">-->
-                <!--<input type="file" name="file" class="el-upload__input"style="display: block;">-->
-                <!--<input type="file" name="file" class="el-upload__input"style="display: block;">-->
-              <!--</div>-->
-              <!--&lt;!&ndash;&ndash;&gt;&lt;!&ndash;&ndash;&gt;&lt;!&ndash;&ndash;&gt;-->
-            <!--</div>-->
-            <!--&lt;!&ndash;&ndash;&gt;-->
-          <!--</div>-->
-        <!--</div>-->
+          <div class="el-form-item">
+          <label class="el-form-item__label" style="width: 80px;">商品图片</label>
+          <div class="el-form-item__content" style="margin-left: 80px;">
+            <div class="el-input">
+              <!---->
+              <div tabindex="0" class="el-upload el-upload--text"style="display: flex;margin-left: 10%;">
+                <!--<i class="el-icon-plus avatar-uploader-icon"></i>-->
+                <input type="file" name="file" class="el-upload__input"style="display: block;margin-left: 10%;">
+                <input type="file" name="file" class="el-upload__input"style="display: block;">
+                <input type="file" name="file" class="el-upload__input"style="display: block;">
+              </div>
+              <!----><!----><!---->
+            </div>
+            <!---->
+          </div>
+        </div>
         <div class="el-form-item">
           <label class="el-form-item__label" style="width: 80px;">商品款式</label>
           <div class="el-form-item__content" style="margin-left: 80px;">
