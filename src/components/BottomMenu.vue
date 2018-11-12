@@ -233,7 +233,7 @@
       left: 0;
       width: 100%;
       z-index: 9999;
-      height: 4.5rem;
+      height: .45rem;
       background-color: #F7F7F7;
       display: flex;
       justify-content: space-around;
@@ -243,12 +243,12 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        font-size: 14px;
+        font-size: .14px;
         color:#999999;
         img{
-          max-width: 1.5rem;
-          margin-top: 1.2rem;
-          margin-bottom: 0.4rem;
+          max-width: .15rem;
+          /*margin-top: .12rem;*/
+          margin-bottom: .04rem;
         }
       }
       /*a{

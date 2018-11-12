@@ -54,12 +54,12 @@
 
 <style scoped lang="scss">
   #sowingmap{
-    margin-top: 6.6rem;
+    margin-top: .066rem;
     .title{
       margin: 0 auto;
       p{
-        line-height: 3.3rem;
-        font-size: 2.4rem;
+        line-height: .33rem;
+        font-size: .24rem;
         text-align: left;
       }
     }
@@ -67,24 +67,24 @@
       overflow-x: hidden;
       .swiper-slide{
         img{
-          margin-bottom: 2.2rem;
+          margin-bottom: .22rem;
         }
         .p1{
           span:nth-child(1){
             float: left;
-            font-size: 1.6rem;
-            line-height: 2.2rem;
+            font-size: .16rem;
+            line-height: .22rem;
           }
           span:nth-child(2){
             float: right;
-            font-size: 1.4rem;
+            font-size: .14rem;
             color: #E26C6C;
-            line-height: 2rem;
+            line-height: .2rem;
           }
         }
         .p2{
-          line-height: 1.7rem;
-          margin-top: 3rem;
+          line-height: .17rem;
+          margin-top: 0.03rem;
           text-align: left;
           color: #999999;
           /*font-size: 1.2rem;*/

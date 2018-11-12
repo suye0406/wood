@@ -9,7 +9,7 @@
           <router-link :to="item.path">
             <img :src="item.img" alt=""width="100%"height="100%">
           </router-link>
-          <p style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 2rem;color: #FFFFFF;">{{item.title}}</p>
+          <p style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: .12rem;color: #FFFFFF;">{{item.title}}</p>
         </div>
         <div class="title">
           <router-link :to="item.path">
@@ -34,14 +34,14 @@
         </div>
       </div>
 
-      <div class="col-lg-12"style="height: 12rem"></div>
+      <div class="col-lg-12"style="height: 1.2rem"></div>
 
       <div class="banner col-lg-12"v-for="(item,index) in allTable">
         <div class="pic col-lg-10">
           <router-link :to="item.path">
             <img :src="item.img" alt=""width="100%"height="100%">
           </router-link>
-          <p style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 2rem;color: #FFFFFF;">{{item.title}}</p>
+          <p style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: .12rem;color: #FFFFFF;">{{item.title}}</p>
         </div>
         <div class="title">
           <router-link :to="item.path">
@@ -67,14 +67,14 @@
       </div>
 
 
-      <div class="col-lg-12"style="height: 12rem"></div>
+      <div class="col-lg-12"style="height: 1.2rem"></div>
 
       <div class="banner col-lg-12"v-for="(item,index) in allBandeng">
         <div class="pic col-lg-10">
           <router-link :to="item.path">
             <img :src="item.img" alt=""width="100%"height="100%">
           </router-link>
-          <p style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 2rem;color: #FFFFFF;">{{item.title}}</p>
+          <p style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: .12rem;color: #FFFFFF;">{{item.title}}</p>
         </div>
         <div class="title">
           <router-link :to="item.path">
@@ -139,13 +139,13 @@
     margin-bottom: 20%;
     width: 100%;
     .title{
-      font-size: 2.4rem;
-      line-height: 3.3rem;
+      font-size: .24rem;
+      line-height: .33rem;
       text-align: left;
     }
     .banner{
       .pic{
-        height: 12rem;
+        height: 1.2rem;
         margin: 0 auto;
         position: relative;
       }
@@ -156,9 +156,9 @@
           color: #000000;
         }
         span{
-          margin-left: .3rem;
-          font-size: 1.2rem;
-          line-height: 1.7rem;
+          margin-left: 0.03rem;
+          font-size: .12rem;
+          line-height: .17rem;
           font-family: 'PingFangSC-Medium';
         }
       }
@@ -169,36 +169,35 @@
       justify-content: space-around;
       .s{
         width: 48%;
-        height: 15.6rem;
+        height: 1.56rem;
       }
     }
     .xt{
-      margin-top: 5.4rem;
-      margin-bottom: 4.8rem;
+      margin-top: .54rem;
+      margin-bottom: .48rem;
       .col-lg-10{
         margin: 0 auto;
         width: 90%;
         display: flex;
         span:nth-child(1){
-          height: .2rem;
+          height: 0.02rem;
           background-color: rgba(221,221,221,0.50);
           display: block;
-          width: 11rem;
+          width: 1.1rem;
         }
         span:nth-child(2){
           ont-family: PingFangSC-Regular;
-          font-size: 10px;
+          font-size: .1px;
           color: #DDDDDD;
-          letter-spacing: -0.03px;
-          line-height: 0.3rem;
-          margin-left: .9rem;
-          margin-right: .9rem;
+          line-height: 0.03rem;
+          margin-left: .09rem;
+          margin-right: .09rem;
         }
         span:nth-child(3){
-          height: .2rem;
+          height: .02rem;
           background-color: rgba(221,221,221,0.50);
           display: block;
-          width: 11rem;
+          width: 1.1rem;
         }
       }
     }

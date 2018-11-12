@@ -7,17 +7,8 @@ import Land from '@/components/My/Land'
 import BindingCell from '@/components/My/BindingCell'
 import My from '@/components/My/My'
 import BindCellPhone from '@/components/My/BindCellPhone'
-import Address from '@/components/My/Address'
-import Admin from '@/components/Admin/Admin'
-import Uploading from '@/components/Admin/CommodityUploading'
-import CommodityManagement from '@/components/Admin/CommodityManagement'
-import IntegratedManagement from '@/components/Admin/IntegratedManagement'
-import CustomerService from '@/components/Admin/CustomerService'
-import DeliveryManagement from '@/components/Admin/DeliveryManagement'
-import Order from '@/components/Admin/Order'
-import Details from '@/components/Details/Details'
 import About from '@/components/My/About'
-import PersonalData from '@/components/My/PersonalData'
+
 
 Vue.use(Router)
 
@@ -63,33 +54,13 @@ export default new Router({
       name: 'About',
       component: About
     },
-    {
-      path: '/personal',
-      name: 'PersonalData',
-      component: PersonalData
-    },
 
-    //后台管理
-    {
-      path: '/admin',
-      name: 'Admin',
-      component: Admin
-    },
-    {
-      path:'/uploading',
-      name:'Uploading',
-      component:Uploading
-    },
-    {
-      path:'/class',
-      name:'CommodityManagement',
-      component:CommodityManagement
-    },
-    {
-      path:'/address',
-      name:'Address',
-      component:Address
-    }
+
+    // {
+    //   path:'/address',
+    //   name:'Address',
+    //   component:Address
+    // }
   ]
 })
 

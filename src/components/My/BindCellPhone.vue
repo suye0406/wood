@@ -54,90 +54,90 @@
   #BindingCell{
     position: relative;
     .header{
-      height: 5.8rem;
+      height: .58rem;
       p{
-        width: 1rem;
-        height: 1.6rem;
-        margin: 1.8rem 0 0 2rem;
+        width: .1rem;
+        height: .16rem;
+        margin: .18rem 0 0 .2rem;
       }
     }
     .logo{
-      height: 13.7rem;
+      height: 1.37rem;
       p{
-        width: 5.6rem;
-        height: 7.7rem;
+        width: .56rem;
+        height: .77rem;
         margin: 0 auto;
       }
     }
     .steps{
       width: 67.8%;
-      height: 5.1rem;
+      height: .51rem;
       margin: 0 auto;
     }
     .FromDate{
-      height: 13.5rem;
+      height: 1.35rem;
       .xian{
         background-color: #DCDCDC;
-        height: .1rem;
-        margin-top: 5.1rem;
+        height: .01rem;
+        margin-top: .51rem;
       }
       .Input{
         border-bottom: .1rem solid #DCDCDC;
         input{
           width: 85.5%;
-          height: 6.2rem;
+          height: .62rem;
           float: left;
           border: none;
-          text-indent: 2rem;
-          line-height: 6.2rem;
+          text-indent: .2rem;
+          line-height: .62rem;
         }
         input::placeholder{
           color: #7B7B7B;
-          text-indent: 2rem;
-          line-height: 6.2rem;
+          text-indent: .2rem;
+          line-height: .62rem;
         }
         p{
-          font-size: 2.5rem;
+          font-size: .25rem;
           /*float: right;*/
-          line-height: 6.2rem;
+          line-height: .62rem;
           color: #7B7B7B;
-          margin-right: 2.3rem;
+          margin-right: .23rem;
         }
       }
       .Code{
-        border-bottom: .1rem solid #DCDCDC;
+        border-bottom: .01rem solid #DCDCDC;
         input{
           width: 65.5%;
-          height: 6.2rem;
+          height: .62rem;
           /*float: left;*/
           border: none;
-          text-indent: 1rem;
-          line-height: 6.2rem;
+          text-indent: .1rem;
+          line-height: .62rem;
         }
         input::placeholder{
           color: #7B7B7B;
-          text-indent: 1rem;
-          line-height: 6.2rem;
+          text-indent: .1rem;
+          line-height: .62rem;
         }
         p{
-          width: 7.3rem;
-          height: 3.2rem;
-          margin : 1.5rem 2.3rem 1.5rem 0rem;
+          width: .73rem;
+          height: .32rem;
+          margin : .15rem .23rem .15rem 0rem;
           background-color: #D8D8D8;
           color: white;
           float: right;
-          line-height: 3.2rem;
+          line-height: .32rem;
           text-align: center;
         }
       }
       .confirm{
         width: 100%;
-        height: 4.5rem;
+        height: .45rem;
         background-color: #333333;
         color: white;
-        line-height: 4.5rem;
+        line-height: .45rem;
         text-align: center;
-        margin-top: 9.1rem;
+        margin-top: .91rem;
       }
     }
   }
