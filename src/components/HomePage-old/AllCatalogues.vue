@@ -6,10 +6,10 @@
     <div>
       <div class="banner col-lg-12"v-for="(item,index) in all">
         <div class="pic col-lg-10">
-          <!--<router-link :to="item.path">-->
+          <router-link :to="item.path">
             <img :src="item.img" alt=""width="100%"height="100%">
-          <!--</router-link>-->
-          <p style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 0.2rem;color: #FFFFFF;">{{item.title}}</p>
+          </router-link>
+          <p style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 2rem;color: #FFFFFF;">{{item.title}}</p>
         </div>
         <div class="title">
           <router-link :to="item.path">
@@ -27,21 +27,21 @@
       <div class="shafa col-lg-10">
         <!--<div class="s"v-for="(item,index) in allpic">-->
         <div class="s"v-for="(item,index) in allpic">
-          <!--<router-link :to="item.path">-->
+          <router-link :to="item.path">
             <img :src="item.img" alt=""width="100%"height="90%">
-          <!--</router-link>-->
+          </router-link>
           <p>{{item.title}}</p>
         </div>
       </div>
 
-      <div class="col-lg-12"style="height: 1.2rem"></div>
+      <div class="col-lg-12"style="height: 12rem"></div>
 
       <div class="banner col-lg-12"v-for="(item,index) in allTable">
         <div class="pic col-lg-10">
-          <!--<router-link :to="item.path">-->
+          <router-link :to="item.path">
             <img :src="item.img" alt=""width="100%"height="100%">
-          <!--</router-link>-->
-          <p style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 0.2rem;color: #FFFFFF;">{{item.title}}</p>
+          </router-link>
+          <p style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 2rem;color: #FFFFFF;">{{item.title}}</p>
         </div>
         <div class="title">
           <router-link :to="item.path">
@@ -59,21 +59,22 @@
       <div class="shafa col-lg-10">
         <!--<div class="s"v-for="(item,index) in allpic">-->
         <div class="s"v-for="(item,index) in allTablepic">
-          <!--<router-link :to="item.path">-->
+          <router-link :to="item.path">
             <img :src="item.img" alt=""width="100%"height="90%">
-          <!--</router-link>-->
+          </router-link>
           <p>{{item.title}}</p>
         </div>
       </div>
 
-      <div class="col-lg-12"style="height: 1.2rem"></div>
+
+      <div class="col-lg-12"style="height: 12rem"></div>
 
       <div class="banner col-lg-12"v-for="(item,index) in allBandeng">
         <div class="pic col-lg-10">
-          <!--<router-link :to="item.path">-->
+          <router-link :to="item.path">
             <img :src="item.img" alt=""width="100%"height="100%">
-          <!--</router-link>-->
-          <p style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 0.2rem;color: #FFFFFF;">{{item.title}}</p>
+          </router-link>
+          <p style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 2rem;color: #FFFFFF;">{{item.title}}</p>
         </div>
         <div class="title">
           <router-link :to="item.path">
@@ -132,35 +133,21 @@
   }
 </script>
 
-<!--
-	作者：offline
-	时间：2018-11-10
-	描述：遇到问题，所有分类还是可以左右移动，解决方案：给当前顶级父元素加overflow：hidden，还需要给所有轮播图的顶级父元素加overf：hidden
--->
 <style scoped lang="scss">
   #allCatalogues{
-  	overflow-x: hidden;
     margin-top: 6%;
-    /*margin-bottom: 10%;*/
+    margin-bottom: 20%;
     width: 100%;
-    padding:0 0.3rem;
     .title{
-      margin-bottom:0.2rem;
-      p{
-        line-height: 0.33rem;
-        font-size: 0.24rem;
-        font-weight: 600;
-        /*text-align: left;*/
-      }
+      font-size: 2.4rem;
+      line-height: 3.3rem;
+      text-align: left;
     }
-    
     .banner{
-    	
       .pic{
-        height: 1.2rem;
+        height: 12rem;
         margin: 0 auto;
         position: relative;
-        height: 2.3rem;
       }
       .title{
         margin:0 auto;
@@ -170,8 +157,8 @@
         }
         span{
           margin-left: .3rem;
-          font-size: 0.12rem;
-          line-height: 0.17rem;
+          font-size: 1.2rem;
+          line-height: 1.7rem;
           font-family: 'PingFangSC-Medium';
         }
       }
@@ -179,31 +166,24 @@
     .shafa{
       display: flex;
       flex-wrap: wrap;
-      justify-content:space-around;
-      align-items: center;
+      justify-content: space-around;
       .s{
         width: 48%;
-        /*height: 2.56rem;*/
-        p{
-        	text-align: center;
-        }
+        height: 15.6rem;
       }
     }
     .xt{
-      margin-top: 0.54rem;
-      /*margin-bottom: 0.48rem;*/
+      margin-top: 5.4rem;
+      margin-bottom: 4.8rem;
       .col-lg-10{
         margin: 0 auto;
-        width: 80%;
-        justify-content: space-between;
+        width: 90%;
         display: flex;
-        flex:1;
-        
         span:nth-child(1){
-          height: 0.02rem;
+          height: .2rem;
           background-color: rgba(221,221,221,0.50);
           display: block;
-          width: 1.1rem;
+          width: 11rem;
         }
         span:nth-child(2){
           ont-family: PingFangSC-Regular;
@@ -211,14 +191,14 @@
           color: #DDDDDD;
           letter-spacing: -0.03px;
           line-height: 0.3rem;
-          margin-left: 1rem;
-          margin-right: 1rem;
+          margin-left: .9rem;
+          margin-right: .9rem;
         }
         span:nth-child(3){
-          height: 0.02rem;
+          height: .2rem;
           background-color: rgba(221,221,221,0.50);
           display: block;
-          width: 1.1rem;
+          width: 11rem;
         }
       }
     }

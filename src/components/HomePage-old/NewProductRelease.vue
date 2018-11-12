@@ -8,9 +8,9 @@
       <div class="new-swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide"v-for="(item,index) in newmap">
-            <!--<router-link :to="item.path">-->
+            <router-link :to="item.path">
               <img :src="item.img" alt=""width="100%"height="100%">
-            <!--</router-link>-->
+            </router-link>
             <p class="col-lg-12 p1">
               <span>{{item.title}}</span>
               <span>￥{{item.price}}</span>
@@ -54,52 +54,38 @@
 
 <style scoped lang="scss">
   #newproductrelease{
-  overflow: hidden;
-  	width: 100%;
     margin-top: 6%;
-    padding-left: 0.3rem;
     .title{
       text-align: left;
-      font-size: 0.24rem;
-      line-height: 0.33rem;
-        /*font-size: 0.24rem;*/
-      font-weight: 600;
-      margin-bottom: 0.2rem;
+      font-size: 2.4rem;
     }
     .newmap{
-      /*overflow-x: hidden;*/
+      overflow-x: hidden;
       margin: 0 auto;
-       width: 100%;
       .swiper-slide{
         img{
-        	display: block;
-        	width: 6.2rem;
-        	height: 2.3rem;
-          margin-bottom: 0.22rem;
+          margin-bottom: 2.2rem;
         }
-       
         .p1{
-        	width: 6.2rem;
           span:nth-child(1){
             float: left;
-            font-size: 0.16rem;
-            line-height: 0.24rem;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
           }
           span:nth-child(2){
             float: right;
-            font-size: 0.14rem;
+            font-size: 1.4rem;
             color: #E26C6C;
-            line-height: 0.2rem;
+            line-height: 2rem;
           }
         }
         .p2{
-        	width: 6.2rem;
-          line-height: 0.3rem;
-          margin-top: 0.3rem;
+          line-height: 1.7rem;
+          margin-top: 3rem;
           text-align: left;
           color: #999999;
           /*font-size: 1.2rem;*/
-        }        
+        }
       }
     }
   }

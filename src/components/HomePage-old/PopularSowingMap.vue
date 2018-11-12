@@ -1,18 +1,16 @@
 <template>
-  
-  
-  <div id="sowingmap1">
+  <div id="sowingmap"class="col-lg-12">
     <div class="title col-lg-10">
       <p>当下流行</p>
     </div>
-    <div class="twosowingmap col-lg-10">
+    <div class="col-lg-10 twosowingmap">
       <!-- Swiper -->
       <div class="popular-swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="(item,index) in twosowingmap">
-           <!-- <router-link :to="item.path">-->
-              <img :src="item.img" alt="">
-            <!--</router-link>-->
+          <div class="swiper-slide"v-for="(item,index) in twosowingmap">
+            <router-link :to="item.path">
+              <img :src="item.img" alt=""width="100%"height="100%">
+            </router-link>
             <p class="col-lg-12 p1">
               <span>{{item.title}}</span>
               <span>￥{{item.price}}</span>
@@ -41,7 +39,7 @@
       this.twosowingmap = this.$store.state.twosowingmap
     },
     mounted(){
-       var swiper = new Swiper('.popular-swiper-container', {
+      var swiper = new Swiper('.popular-swiper-container', {
         slidesPerView: 'auto',
         centeredSlides: true,
         spaceBetween: 30,
@@ -55,58 +53,42 @@
 </script>
 
 <style scoped lang="scss">
-html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input,figure,figcaption{margin:0;padding:0;}
-	ul,ol,li{list-style:none;}
-	*{box-sizing:border-box;}
-	
-  
- #sowingmap1{
-  overflow: hidden;
-  	width: 100%;
-    margin-top: 6%;
-    padding-left: 0.3rem;
+  #sowingmap{
+    margin-top: 6.6rem;
     .title{
-      text-align: left;
-      font-size: 0.24rem;
-      line-height: 0.33rem;
-        /*font-size: 0.24rem;*/
-      font-weight: 600;
-      margin-bottom: 0.2rem;
+      margin: 0 auto;
+      p{
+        line-height: 3.3rem;
+        font-size: 2.4rem;
+        text-align: left;
+      }
     }
     .twosowingmap{
-      /*overflow-x: hidden;*/
-      margin: 0 auto;
-       width: 100%;
+      overflow-x: hidden;
       .swiper-slide{
         img{
-        	display: block;
-        	width: 6.2rem;
-        	height: 2.3rem;
-          margin-bottom: 0.22rem;
+          margin-bottom: 2.2rem;
         }
-       
         .p1{
-        	width: 6.2rem;
           span:nth-child(1){
             float: left;
-            font-size: 0.16rem;
-            line-height: 0.24rem;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
           }
           span:nth-child(2){
             float: right;
-            font-size: 0.14rem;
+            font-size: 1.4rem;
             color: #E26C6C;
-            line-height: 0.2rem;
+            line-height: 2rem;
           }
         }
         .p2{
-        	width: 6.2rem;
-          line-height: 0.3rem;
-          margin-top: 0.3rem;
+          line-height: 1.7rem;
+          margin-top: 3rem;
           text-align: left;
           color: #999999;
           /*font-size: 1.2rem;*/
-        }        
+        }
       }
     }
   }
