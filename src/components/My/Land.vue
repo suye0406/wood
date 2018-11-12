@@ -114,7 +114,7 @@
         console.log(this.username);
         axios({
           type : "get", //提交方式
-          url : "http://10.9.12.91:8080/user/getcode?username="+this.username,
+          url : "http://120.79.31.60:8080/user/getcode?username="+this.username,
           success : function(result) {//返回数据根据结果进行相应的处理
             }
           });
@@ -123,7 +123,7 @@
         console.log(this.username,this.password);
         axios({
           type:"get",
-          url: 'http://10.9.12.91:8080/user/login?username='+this.username+'?password='+this.password,
+          url: 'http://120.79.31.60:8080/user/login?username='+this.username+'?password='+this.password,
           success : function (result) {
             console.log(result);
           }
@@ -134,7 +134,7 @@
         console.log(this.username)
         axios({
           type:"get",
-          url : "http://10.9.12.91:8080/user/getcode?username="+this.username,
+          url : "http://120.79.31.60:8080/user/getcode?username="+this.username,
           success:function (result) {
             console.log(this.username)
           }
@@ -145,7 +145,7 @@
         axios({
           type:"get",
           // http://localhost:8080/user/register?username=15830913577&password=123456&code=950899
-          url:"http://10.9.12.91:8080/user/register?username="+this.username+"&password="+this.password+"&code="+this.code,
+          url:"http://120.79.31.60:8080/user/register?username="+this.username+"&password="+this.password+"&code="+this.code,
           success:function (result) {
             console.log(this.username)
             console.log(result)
