@@ -7,6 +7,8 @@
 </template>
 
 <script>
+	import "../../assets/css/rem";
+    import "../../assets/css/reset.css";
 	import HeaderMenu from './Hearder'
 	import List from './List'
 	import FooterMenu from '../FooterMenu'
