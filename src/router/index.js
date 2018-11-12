@@ -18,7 +18,7 @@ import Order from '@/components/Admin/Order'
 import Details from '@/components/Details/Details'
 import About from '@/components/My/About'
 import PersonalData from '@/components/My/PersonalData'
-
+import Category from '@/components/Category/Category'
 Vue.use(Router)
 
 export default new Router({
@@ -52,6 +52,11 @@ export default new Router({
       path: '/bindcellphone',
       name: 'BindCellPhone',
       component: BindCellPhone
+    },
+     {
+    	path:"/category",
+    	name:"Category",
+    	component:Category
     },
     {
       path: '/my',
@@ -100,6 +105,7 @@ export default new Router({
     绑定手机号-----’/cell‘
     绑定邮箱-------’/bindcellphone‘
     我的---------’/my‘
+  商品分类 --------'/category(2018-11-12)'
 
     admin
     后台商品管理------’/admin‘

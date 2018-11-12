@@ -5,7 +5,8 @@
     <PopularSowingMap></PopularSowingMap>
     <NewProductRelease></NewProductRelease>
     <AllCatalogues></AllCatalogues>
-    <BottomMenu></BottomMenu>
+    <!--<BottomMenu></BottomMenu>-->
+    <FooterMenu></FooterMenu>
   </div>
 </template>
 
@@ -15,8 +16,8 @@
   import PopularSowingMap from './PopularSowingMap'
   import NewProductRelease from './NewProductRelease'
   import AllCatalogues from './AllCatalogues'
-  import BottomMenu from '../BottomMenu'
-
+//import BottomMenu from '../BottomMenu'
+import FooterMenu from '../FooterMenu'
   export default {
     data(){
       return{
@@ -24,7 +25,7 @@
       }
     },
     components:{
-      Header,SowingMap,PopularSowingMap,NewProductRelease,AllCatalogues,BottomMenu
+      Header,SowingMap,PopularSowingMap,NewProductRelease,AllCatalogues,/*BottomMenu,*/FooterMenu
     }
   }
 </script>
