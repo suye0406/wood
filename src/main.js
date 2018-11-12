@@ -7,16 +7,11 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import store from './vuex/store'
 import Mint from 'mint-ui';
-import "./assets/css/rem";
-import "./assets/css/reset.css";
 
 Vue.use(Mint);
-
 Vue.use(ElementUI);
-
-
 Vue.config.productionTip = false
-
+console.log("111");
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
