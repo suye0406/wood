@@ -1,18 +1,18 @@
-<template>
-  <div>发货管理</div>
-</template>
+<!--<template>-->
+  <!--<div>发货管理</div>-->
+<!--</template>-->
 
-<script>
+<!--<script>-->
 
-  export default {
-    data(){
-      return{
+  <!--export default {-->
+    <!--data(){-->
+      <!--return{-->
 
-      }
-    }
-  }
-</script>
+      <!--}-->
+    <!--}-->
+  <!--}-->
+<!--</script>-->
 
-<style scoped lang="scss">
+<!--<style scoped lang="scss">-->
 
-</style>
+<!--</style>-->

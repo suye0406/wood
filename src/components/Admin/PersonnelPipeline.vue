@@ -1,12 +1,12 @@
 <template>
   <div id="personnel"style="background-color: black;">
     <div class="content">
-      <div class="col-lg-12"style="background:url(http://imgsrc.baidu.com/imgad/pic/item/10dfa9ec8a136327c895810e9a8fa0ec08fac797.jpg)no-repeat;
+      <div class="col-lg-12"style=";
       background-size: cover;;height: 100%;">
         <div class="col-lg-12">
           <table class="table table-condensed">
             <thead>
-            <tr>
+            <tr style="overflow: hidden;">
               <th v-for="(item,index) in classtitle">{{item}}</th>
               <th>
                 <!--<select style="border: 0rem solid;">-->
@@ -27,13 +27,15 @@
             </tr>
             </thead>
             <tbody>
-            <tr v-for="(item,index) in list">
+            <tr v-for="(item,index) in list"style="overflow: hidden;">
               <th>{{item.id}}</th>
               <th>{{item.name}}</th>
               <th>{{item.intro}}</th>
               <th>{{item.color}}</th>
               <th>{{item.style}}</th>
               <th>{{item.price}}</th>
+              <th>{{item.num}}</th>
+              <th></th>
               <!--<th>{{item.number}}</th>-->
               <!--<th>{{item.classification}}</th>-->
               <th>
@@ -104,7 +106,7 @@
       //   console.log(res.data.data);
       // }).catch(error=>console.log(error));
 
-      axios.get('http://localhost:8080/goods/getGoodsDetailByNewTime').then(res=>{
+      axios.get('http://localhost:8080/goods/getGoodsListByTypeId?typeid=1').then(res=>{
         this.list = res.data.data
         console.log(this.list)
       }).catch(error=>console.log(error));

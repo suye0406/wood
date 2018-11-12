@@ -58,6 +58,17 @@
           </div>
         </div>
         <div class="el-form-item">
+          <label class="el-form-item__label" style="width: 80px;">数量</label>
+          <div class="el-form-item__content" style="margin-left: 80px;">
+            <div class="el-input">
+              <!---->
+              <input type="text" autocomplete="off" class="el-input__inner"name="num">
+              <!----><!----><!---->
+            </div>
+            <!---->
+          </div>
+        </div>
+        <div class="el-form-item">
           <label class="el-form-item__label" style="width: 80px;">商品类型</label>
           <select style="float: left;width: 100px;height: 30px;">
             <option v-for="item in list" :value="item.id">{{item.name}}</option>

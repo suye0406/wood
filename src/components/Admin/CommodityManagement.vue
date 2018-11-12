@@ -101,6 +101,8 @@
         background-position: 50% -20%;
       }
       .list{
+        background: url("../../../static/img/banner/fa033044ef4ca8e4e9cf89e8a3fef3c1.png")no-repeat;
+        background-size: cover;
         margin-top: 10vh;
         ul{
           li{

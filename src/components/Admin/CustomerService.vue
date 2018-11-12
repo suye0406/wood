@@ -1,13 +1,13 @@
-<template>
-  <div>客服人员管理</div>
-</template>
+<!--<template>-->
+<!--<div>客服人员管理</div>-->
+<!--</template>-->
 
-<script>
-    export default {
-        name: "CustomerService"
-    }
-</script>
+<!--<script>-->
+<!--export default {-->
+<!--name: "CustomerService"-->
+<!--}-->
+<!--</script>-->
 
-<style scoped>
+<!--<style scoped>-->
 
-</style>
+<!--</style>-->
