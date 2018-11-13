@@ -8,8 +8,12 @@ import BindingCell from '@/components/My/BindingCell'
 import My from '@/components/My/My'
 import BindCellPhone from '@/components/My/BindCellPhone'
 import About from '@/components/My/About'
+<<<<<<< HEAD
 import Address from '@/components/My/Address'
 
+=======
+import Category from '@/components/Category/Category'
+>>>>>>> 856c9218d243e301c9b590a66abb97da25035c3b
 
 Vue.use(Router)
 
@@ -45,6 +49,11 @@ export default new Router({
       name: 'BindCellPhone',
       component: BindCellPhone
     },
+     {
+    	path:"/category",
+    	name:"Category",
+    	component:Category
+    },
     {
       path: '/my',
       name: 'My',
@@ -55,12 +64,17 @@ export default new Router({
       name: 'About',
       component: About
     },
+<<<<<<< HEAD
     {
         path: '/address',
         name: 'Address',
         component: Address
       },
 
+=======
+
+
+>>>>>>> 856c9218d243e301c9b590a66abb97da25035c3b
     // {
     //   path:'/address',
     //   name:'Address',
@@ -76,6 +90,7 @@ export default new Router({
     绑定手机号-----’/cell‘
     绑定邮箱-------’/bindcellphone‘
     我的---------’/my‘
+  商品分类 --------'/category(2018-11-12)'
 
     admin
     后台商品管理------’/admin‘

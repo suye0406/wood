@@ -6,6 +6,7 @@
 </template>
 
 <script>
+  import '../../../static/css/global.css'
   export default {
     data(){
       return{

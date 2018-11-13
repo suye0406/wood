@@ -139,7 +139,11 @@
     .title2{
       width: 81.9%;
       display: flex;
+<<<<<<< HEAD
       justify-content: space-between;
+=======
+      justify-content: space-around;
+>>>>>>> 856c9218d243e301c9b590a66abb97da25035c3b
       height: .529rem;
       margin: 0 auto;
       div:nth-child(2){
@@ -158,9 +162,12 @@
       }
       .tp{
         font-size: .12rem;
+<<<<<<< HEAD
         margin-left: -0.08rem;
         /* justify-content: space-between; */
         margin-top: 0.1rem;
+=======
+>>>>>>> 856c9218d243e301c9b590a66abb97da25035c3b
       }
     }
     .classlist{

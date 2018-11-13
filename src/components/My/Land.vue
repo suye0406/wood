@@ -49,7 +49,11 @@
           </div>
           <div class="swiper-slide" style="">
             <div class=""style="width: 67.8%;margin: 0 auto;">
+<<<<<<< HEAD
               <div style="margin-bottom: 1rem;">
+=======
+              <div>
+>>>>>>> 856c9218d243e301c9b590a66abb97da25035c3b
                 <p class="title"style="display: flex;justify-content: space-between"><span>快速注册</span><span class="el-icon-arrow-left"></span>请左右滑动 <span class="el-icon-arrow-right"></span></p>
                 <div>
                   <input type="text"placeholder="请输入手机号"class="username"v-model="username"@keyup="regis"style="margin-bottom: -0.1rem">
@@ -117,7 +121,7 @@
         console.log(this.username);
         axios({
           type : "get", //提交方式
-          url : "http://10.9.12.91:8080/user/getcode?username="+this.username,
+          url : "http://120.79.31.60:8080/user/getcode?username="+this.username,
           success : function(result) {//返回数据根据结果进行相应的处理
             }
           });
@@ -127,7 +131,11 @@
         /*
         axios({
           type:"get",
+<<<<<<< HEAD
           url: 'http://120.79.31.60:8080/wood-1.0/user/login?username='+this.username+'&password='+this.password,
+=======
+          url: 'http://120.79.31.60:8080/user/login?username='+this.username+'?password='+this.password,
+>>>>>>> 856c9218d243e301c9b590a66abb97da25035c3b
           success : function (result) {
             console.log(result);
           }
@@ -167,7 +175,7 @@
         console.log(this.username)
         axios({
           type:"get",
-          url : "http://10.9.12.91:8080/user/getcode?username="+this.username,
+          url : "http://120.79.31.60:8080/user/getcode?username="+this.username,
           success:function (result) {
             console.log(this.username)
           }
@@ -178,7 +186,7 @@
         axios({
           type:"get",
           // http://localhost:8080/user/register?username=15830913577&password=123456&code=950899
-          url:"http://10.9.12.91:8080/user/register?username="+this.username+"&password="+this.password+"&code="+this.code,
+          url:"http://120.79.31.60:8080/user/register?username="+this.username+"&password="+this.password+"&code="+this.code,
           success:function (result) {
             console.log(this.username)
             console.log(result)
