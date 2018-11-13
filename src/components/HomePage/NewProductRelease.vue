@@ -1,7 +1,7 @@
 <template>
   <div id="newproductrelease">
     <div class="title col-lg-10">
-      <p>新品发布</p>
+      <p style="text-indent: .16rem;margin-bottom: .2rem;">新品发布</p>
     </div>
     <div class="newmap col-lg-10">
       <!-- Swiper -->
@@ -57,33 +57,39 @@
     margin-top: 6%;
     .title{
       text-align: left;
-      font-size: 2.4rem;
+      font-size: .24rem;
     }
     .newmap{
       overflow-x: hidden;
       margin: 0 auto;
       .swiper-slide{
         img{
-          margin-bottom: 2.2rem;
+          margin-bottom: .22rem;
         }
         .p1{
+          margin-bottom: .3rem;
           span:nth-child(1){
+            margin-left: .16rem;
             float: left;
-            font-size: 1.6rem;
-            line-height: 2.2rem;
+            font-size: .16rem;
+            line-height: .22rem;
           }
           span:nth-child(2){
             float: right;
-            font-size: 1.4rem;
+            margin-right: .16rem;
+            font-size: .14rem;
             color: #E26C6C;
-            line-height: 2rem;
+            line-height: .2rem;
           }
         }
         .p2{
-          line-height: 1.7rem;
-          margin-top: 3rem;
-          text-align: left;
+          line-height: .17rem;
+          /*margin-top: .3rem;*/
           color: #999999;
+          text-align: left;
+          margin: 0 auto;
+          /*text-indent: .16rem;*/
+          width: 90%;
           /*font-size: 1.2rem;*/
         }
       }

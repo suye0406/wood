@@ -1,19 +1,19 @@
 <template>
   <div id="About">
-    <div class="col-lg-12"style="height: 2rem;display: flex;margin-bottom:6.8rem;">
-      <p style="width: 1rem;height: 1.6rem;margin-left: 1.6rem;margin-top: 1rem">
+    <div class="col-lg-12"style="height: .2rem;display: flex;margin-bottom:.68rem;">
+      <p style="width: .1rem;height: .16rem;margin-left: 1rem;margin-top: .1rem">
         <img src="../../../static/img/二倍率icon切图/Back@2x.png" height="100%" width="100%"/>
       </p>
-      <p style="margin-top: 1rem;font-weight: bold;text-align: center;">
-        <span style="margin: 0 auto;text-align: center;display: block;margin-left: 12rem;">关于WOOD</span>
+      <p style="margin-top: 0.1rem;font-weight: bold;text-align: center;">
+        <span style="margin: 0 auto;text-align: center;display: block;margin-left: .12rem;">关于WOOD</span>
       </p>
     </div>
-    <div style="width: 5.6rem;height: 7.7rem;margin: 0 auto;">
+    <div style="width: .56rem;height: .77rem;margin: 0 auto;">
       <img src="../../../static/img/二倍率icon切图/logo2@2x.png" height="100%" width="100%"/>
     </div>
-    <div style="height: 8rem;"class="col-lg-12"></div>
+    <div style="height: .08rem;"class="col-lg-12"></div>
     <div class="classlist col-lg-12">
-      <div style="margin-top: 4.6rem;"></div>
+      <div style="margin-top: .46rem;"></div>
       <div class="collection col-lg-12"v-for="(item,index) in menu">
         <!--<router-link :to="item.path"style="display: flex;justify-content: space-between;">-->
         <router-link :to="item.path">
@@ -27,7 +27,7 @@
           </div>
         </router-link>
         <div>
-          <span style="width:.8rem;height: 1.2rem;margin-right: 2rem;margin-top: -.1rem;">
+          <span style="width:.08rem;height: .12rem;margin-right: .2rem;margin-top: -.01rem;">
         <img :src="item.iconpic" height="100%" width="100%"/>
         </span>
         </div>
@@ -91,14 +91,14 @@
         display: flex;
         justify-content: space-between;
         p{
-          width: 2rem;
-          height: 2rem;
-          margin: 0 1.6rem 3.4rem 1.6rem;
+          width: .2rem;
+          height: .2rem;
+          margin: 0 .16rem .34rem .16rem;
         }
         span{
           display: block;
-          line-height: 2rem;
-          margin-top: .1rem;
+          line-height: .2rem;
+          margin-top: .01rem;
           color: black;
         }
       }
