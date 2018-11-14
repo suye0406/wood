@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="classlist col-lg-12">
-      <div style="margin-top: 4.6rem;"></div>
+      <div style="margin-top: .46rem;"></div>
       <div class="collection col-lg-12"v-for="(item,index) in menu">
         <!--<router-link :to="item.path"style="display: flex;justify-content: space-between;">-->
         <router-link :to="item.path">
@@ -31,7 +31,7 @@
           </div>
         </router-link>
           <div>
-          <span style="width:.8rem;height: 1.2rem;margin-right: 2rem;margin-top: -.1rem;">
+          <span style="width:.08rem;height: .12rem;margin-right: .2rem;margin-top: -.01rem;">
         <img :src="item.iconpic" height="100%" width="100%"/>
         </span>
           </div>
@@ -83,7 +83,7 @@
             icon:'../../../static/img/二倍率icon切图/data@2x.png',
             stitle:'我的资料',
             iconpic:'../../../static/img/二倍率icon切图/right@2x.png',
-                        path:'/404'
+                        path:'/personal'
           },
           {
             icon:'../../../static/img/二倍率icon切图/security@2x.png',
@@ -114,39 +114,53 @@
 
 <style scoped lang="scss">
   #My{
+    margin-bottom: .5rem;
     .header{
-      height: 10.71rem;
+      height: 1.071rem;
       .head{
-        margin-top: 4.5rem;
-        height: 6rem;
+        margin-top: .45rem;
+        height: .6rem;
         display: flex;
         .pic{
-          width: 6rem;
-          height: 6rem;
+          width: .6rem;
+          height: .6rem;
           background-color: #D8D8D8;
           border-radius: 50%;
-          margin-left: 1.6rem;
+          margin-left: .16rem;
           overflow: hidden;
         }
         .title{
-          font-size: 2.2rem;
-          line-height: 6rem;
-          margin-left: 1.6rem;
+          font-size: .22rem;
+          line-height: .6rem;
+          margin-left: .16rem;
         }
       }
     }
     .title2{
       width: 81.9%;
       display: flex;
-      justify-content: space-around;
-      height: 5.29rem;
+      justify-content: space-between;
+      height: .529rem;
       margin: 0 auto;
+      div:nth-child(2){
+        p:nth-child(2){
+          margin-left: -.05rem;
+        }
+      }
+      div:nth-child(3){
+        p:nth-child(2){
+          margin-left: -.05rem;
+        }
+      }
       .icon{
-        width: 2.57rem;
-        height: 2.78rem;
+        width: .257rem;
+        height: .278rem;
       }
       .tp{
-        font-size: 1.2rem;
+        font-size: .12rem;
+        margin-left: -0.08rem;
+        /* justify-content: space-between; */
+        margin-top: 0.1rem;
       }
     }
     .classlist{
@@ -154,17 +168,44 @@
         display: flex;
         justify-content: space-between;
         p{
-          width: 2rem;
-          height: 2rem;
-          margin: 0 1.6rem 3.4rem 1.6rem;
+          width: .2rem;
+          height: .2rem;
+          margin: 0 .16rem .34rem .16rem;
         }
         span{
           display: block;
-          line-height: 2rem;
-          margin-top: .1rem;
+          line-height: .2rem;
+          margin-top: .01rem;
           color: black;
         }
       }
     }
   }
+  /*
+
+                      _ooOoo_
+                     o8888888o
+                     88" . "88
+                     (| -_- |)
+                      O\ = /O
+                  ____/`---'\____
+                .   ' \\| |// `.
+                 / \\||| : |||// \
+               / _||||| -:- |||||- \
+                 | | \\\ - /// | |
+               | \_| ''\---/'' | |
+                \ .-\__ `-` ___/-. /
+             ___`. .' /--.--\ `. . __
+          ."" '< `.___\_<|>_/___.' >'"".
+         | | : `- \`.;`\ _ /`;.`/ - ` : | |
+           \ \ `-. \_ __\ /__ _/ .-` / /
+   ======`-.____`-.___\_____/___.-`____.-'======
+                      `=---='
+   .............................................
+            佛祖保佑             永无BUG
+
+  */
 </style>
+
+
+

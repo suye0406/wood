@@ -51,7 +51,7 @@
 
 <style scoped lang="scss">
   #sowingmap{
-    height: 20rem;
+    height: 2rem;
     /*background-color: #5cb85c;*/
   }
 </style>

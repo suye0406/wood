@@ -7,17 +7,12 @@ import Land from '@/components/My/Land'
 import BindingCell from '@/components/My/BindingCell'
 import My from '@/components/My/My'
 import BindCellPhone from '@/components/My/BindCellPhone'
-import Address from '@/components/My/Address'
-import Admin from '@/components/Admin/Admin'
-import Uploading from '@/components/Admin/CommodityUploading'
-import CommodityManagement from '@/components/Admin/CommodityManagement'
-import IntegratedManagement from '@/components/Admin/IntegratedManagement'
-import CustomerService from '@/components/Admin/CustomerService'
-import DeliveryManagement from '@/components/Admin/DeliveryManagement'
-import Order from '@/components/Admin/Order'
-import Details from '@/components/Details/Details'
 import About from '@/components/My/About'
-import PersonalData from '@/components/My/PersonalData'
+import Address from '@/components/My/Address'
+import Personal from '@/components/My/Personal'
+import Cart from '@/components/ShoppingCart/Cart'
+import Edit from '@/components/ShoppingCart/Edit'
+import Edit2 from '@/components/ShoppingCart/Edit2'
 
 Vue.use(Router)
 
@@ -64,32 +59,30 @@ export default new Router({
       component: About
     },
     {
-      path: '/personal',
-      name: 'PersonalData',
-      component: PersonalData
-    },
-
-    //后台管理
+        path: '/address',
+        name: 'Address',
+        component: Address
+      },
     {
-      path: '/admin',
-      name: 'Admin',
-      component: Admin
-    },
+        path: '/personal',
+        name: 'Personal',
+        component: Personal
+      },
     {
-      path:'/uploading',
-      name:'Uploading',
-      component:Uploading
-    },
+        path: '/cart',
+        name: 'Cart',
+        component: Cart
+      },
     {
-      path:'/class',
-      name:'CommodityManagement',
-      component:CommodityManagement
-    },
+        path: '/edit',
+        name: 'Edit',
+        component: Edit
+      },
     {
-      path:'/address',
-      name:'Address',
-      component:Address
-    }
+      path: '/edit2',
+      name: 'Edit2',
+      component: Edit2
+    },
   ]
 })
 
