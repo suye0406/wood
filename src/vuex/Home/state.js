@@ -1,46 +1,88 @@
 export default {
   twosowingmap:[
     {
-      img:'../../../static/img/Popular/popular-1.jpeg',
-      title:'飞鸟沙发',
+      img:[
+        '../../../static/img/Popular/popular-1.jpeg',
+        '../../../static/img/Popular/popular-1.jpeg',
+        '../../../static/img/Popular/popular-1.jpeg',
+        '../../../static/img/Popular/popular-1.jpeg',
+        '../../../static/img/Popular/popular-1.jpeg',
+      ],
+      title:'飞鸟沙发1',
       price:'2185',
       content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
       path:'/404',
+      num:1
     },
     {
-      img:'../../../static/img/Popular/popular-2.jpeg',
-      title:'飞鸟沙发',
+      img:[
+        '../../../static/img/Popular/popular-2.jpeg',
+        '../../../static/img/Popular/popular-2.jpeg',
+        '../../../static/img/Popular/popular-2.jpeg',
+        '../../../static/img/Popular/popular-2.jpeg',
+        '../../../static/img/Popular/popular-2.jpeg',
+      ],
+      title:'飞鸟沙发2',
       price:'2185',
       content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
       path:'/404',
+      num:1
     },
     {
-      img:'../../../static/img/Popular/popular-3.jpeg',
+      img:[
+        '../../../static/img/Popular/popular-3.jpeg',
+        '../../../static/img/Popular/popular-3.jpeg',
+        '../../../static/img/Popular/popular-3.jpeg',
+        '../../../static/img/Popular/popular-3.jpeg',
+        '../../../static/img/Popular/popular-3.jpeg',
+      ],
       title:'飞鸟沙发',
       price:'2185',
       content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
       path:'/404',
+      num:1
     },
     {
-      img:'../../../static/img/Popular/popular-4.jpeg',
+      img:[
+        '../../../static/img/Popular/popular-4.jpeg',
+        '../../../static/img/Popular/popular-4.jpeg',
+        '../../../static/img/Popular/popular-4.jpeg',
+        '../../../static/img/Popular/popular-4.jpeg',
+        '../../../static/img/Popular/popular-4.jpeg',
+      ],
       title:'飞鸟沙发',
       price:'2185',
       content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
       path:'/404',
+      num:1
     },
     {
-      img:'../../../static/img/Popular/popular-5.jpeg',
+      img:[
+        '../../../static/img/Popular/popular-5.jpeg',
+        '../../../static/img/Popular/popular-5.jpeg',
+        '../../../static/img/Popular/popular-5.jpeg',
+        '../../../static/img/Popular/popular-5.jpeg',
+        '../../../static/img/Popular/popular-5.jpeg',
+      ],
       title:'飞鸟沙发',
       price:'2185',
       content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
       path:'/404',
+      num:1
     },
     {
-      img:'../../../static/img/Popular/popular-6.jpeg',
+      img:[
+        '../../../static/img/Popular/popular-6.jpeg',
+        '../../../static/img/Popular/popular-6.jpeg',
+        '../../../static/img/Popular/popular-6.jpeg',
+        '../../../static/img/Popular/popular-6.jpeg',
+        '../../../static/img/Popular/popular-6.jpeg',
+      ],
       title:'飞鸟沙发',
       price:'2185',
       content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
       path:'/404',
+      num:1
     },
   ],
   newmap:[

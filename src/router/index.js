@@ -13,6 +13,7 @@ import Personal from '@/components/My/Personal'
 import Cart from '@/components/ShoppingCart/Cart'
 import Edit from '@/components/ShoppingCart/Edit'
 import Edit2 from '@/components/ShoppingCart/Edit2'
+import Details from '@/components/Details/Details'
 
 Vue.use(Router)
 
@@ -82,6 +83,11 @@ export default new Router({
       path: '/edit2',
       name: 'Edit2',
       component: Edit2
+    },
+    {
+      path: '/details/:id',
+      name: 'Details',
+      component: Details
     },
   ]
 })

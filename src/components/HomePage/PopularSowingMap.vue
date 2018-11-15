@@ -8,9 +8,9 @@
       <div class="popular-swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide"v-for="(item,index) in twosowingmap">
-            <router-link :to="item.path">
-              <img :src="item.img" alt=""width="100%"height="100%">
-            </router-link>
+            <!--<router-link to="/details">-->
+              <img :src="item.img[0]" alt=""width="100%"height="100%"@click="send(index)">
+            <!--</router-link>-->
             <p class="col-lg-12 p1">
               <span>{{item.title}}</span>
               <span>￥{{item.price}}</span>
@@ -33,10 +33,19 @@
     data(){
       return{
         twosowingmap:'',
+        listdata:[],
       }
     },
     created(){
       this.twosowingmap = this.$store.state.category.twosowingmap;
+      console.log(this.twosowingmap)
+    },
+    methods:{
+      send(index){
+        console.log(index)
+        this.$router.push({name: 'Details', params: {id: index}})
+        // location.href = "#/details"
+      }
     },
     mounted(){
       var swiper = new Swiper('.popular-swiper-container', {
@@ -49,6 +58,20 @@
         },
       });
     }
+  }
+  function addStorage(key,value){
+    localStorage.removeItem(key);
+    localStorage.setItem(key,value);
+  }
+
+  function removeStorage(key){
+    localStorage.removeItem(key);
+  }
+
+  function getStorage(key){
+    var storage = window.localStorage;
+    var val = storage.getItem(key);
+    return val;
   }
 </script>
 

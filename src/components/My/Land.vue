@@ -28,7 +28,7 @@
                   <span style="position:absolute;right: 1rem;top: 1.45rem;display: none">{{num}}</span>
                 </div>
                 <input type="button" value="登陆" class="submit"@click=""style=""v-show="falg"/>
-                <input type="button" value="登陆" class="submit"@click="kl"style="color: #fff;background-color: #409eff;border-color: #409eff;"v-show="fal"/>
+                <input type="button" value="登陆" class="submit"@click="land"style="color: #fff;background-color: #409eff;border-color: #409eff;"v-show="fal"/>
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@
                 <div>
                   <input type="text"placeholder="请输入密码"class="code"v-model="password"style="width: 100%;">
                 </div>
-                <input type="button" value="登陆" class="submit"@click="land"/>
+                <input type="button" value="登陆" class="submit"@click="denglu"/>
               </div>
             </div>
           </div>
@@ -114,19 +114,15 @@
         }
       },
       vcode(){
-        console.log(this.username);
         axios({
           type : "get", //提交方式
-          url : "http://10.9.12.91:8080/user/getcode?username="+this.username,
+          url : "http://localhost:8080/user/getcode?username="+this.username,
           success : function(result) {//返回数据根据结果进行相应的处理
+            console.log(result)
             }
           });
       },
       land(){
-        console.log(this.username,this.password);
-
-
-
         /*
         axios({
           type:"get",
@@ -137,25 +133,24 @@
         })
         */
         axios.defaults.withCredentials = true
-        axios.get('http://120.79.31.60:8080/wood-1.0/user/login', {
+        axios.get('http://localhost:8080/user/login', {
           params: { 'username': this.username,'password':this.password}
         }).then(function (response) {
           console.log(response)
-          if(response.data.code==1){
-            var c = document.cookie
-
-            alert(c)
-            axios({
-              method:"get",
-              url:"/wood-1.0/goods/getGoodsListByTypeId?typeid=1"
-            }).then((data)=>{
-              console.log(data)
-            })
-          }
         }).catch(function (error) {
           alert(error);
         });
 
+      },
+      denglu(){
+        axios.defaults.withCredentials = true
+        axios.get('http://localhost:8080/user/login', {
+          params: { 'username': this.username,'password':this.password}
+        }).then(function (response) {
+          console.log(response)
+        }).catch(function (error) {
+          alert(error);
+        });
       },
 
     //   axios.get('http://120.79.31.60:8080/wood-1.0/goods/getGoodsListByTypeId', {

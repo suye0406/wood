@@ -3,7 +3,9 @@
       <el-row>
         <el-col :span="24">
           <div class="grid-content bg-purple-dark header">
-            <div class="el-icon-arrow-left"></div>
+            <router-link to="/home">
+              <div class="el-icon-arrow-left"></div>
+            </router-link>
             <div class="">购物车</div>
             <div class="">
               <router-link to="/edit2"style="color: black;">
@@ -34,27 +36,27 @@
                         <!--<div>-->
                           <!--<span>新品特惠</span>-->
                         <!--</div>-->
-                        <el-row>
+                        <el-row v-for="(item,index) in shoop">
                           <el-col :span="9">
                             <div class="grid-content bg-purple d1">
                               <div></div>
                               <div>
-                                <img src="../../../static/img/产品图/沙发/单人沙发/COFA精致沙发.png" height="50%" width="100%"/>
+                                <img :src="item.img" height="50%" width="100%"/>
                               </div>
                               <div>
-                                <span>新品特惠</span>
+                                <span>{{item.title}}</span>
                               </div>
                             </div>
                           </el-col>
                           <el-col :span="15">
                             <div class="grid-content bg-purple-light d2">
                               <div>
-                                <p>飞鸟沙发</p>
-                                <p>梅红/三人座</p>
-                                <p>预计2018-11-03前发货</p>
+                                <p>{{item.title}}</p>
+                                <p>{{item.title2}}</p>
+                                <p>{{item.title3}}</p>
                                 <p>
-                                  <span>￥6650</span>
-                                  <span>x1</span>
+                                  <span>￥{{item.price}}</span>
+                                  <span>x{{item.num}}</span>
                                 </p>
                               </div>
                             </div>
@@ -105,8 +107,10 @@
         name: "Edit",
       data(){
           return{
+            shoop:[],
             xzicon:false,
-            qxz:false
+            qxz:false,
+            shoopData:[],
           }
       },
       methods:{
@@ -119,7 +123,41 @@
         // bj(){
         //
         // }
-      }
+      },
+      // watch:{
+      //   shoop(newVal,oldVal){
+      //     console.log(newVal,oldVal)
+      //   }
+      // },
+      mounted(){
+        //读取购物localStorage 存储对象
+        var localStorageVal = JSON.parse(getStorage('shoop'));
+        this.shoopData = localStorageVal;
+        console.log(this.shoopData);
+      },
+      watch:{
+          shoopData(newVal,oldVal){
+            console.log("123"+newVal,+"112312"+oldVal)
+            // this.shoop = newVal,"-------"
+        }
+      },
+      created(){
+          this.shoop = this.$store.state.cart.cart;
+      },
+    }
+    function addStorage(key,value){
+      localStorage.removeItem(key);
+      localStorage.setItem(key,value);
+    }
+
+    function removeStorage(key){
+      localStorage.removeItem(key);
+    }
+
+    function getStorage(key){
+      var storage = window.localStorage;
+      var val = storage.getItem(key);
+      return val;
     }
 </script>
 

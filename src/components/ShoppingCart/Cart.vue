@@ -1,6 +1,6 @@
 <template>
     <div id="Cart">
-      <el-row style="margin-bottom: .1rem;">
+      <el-row style="margin-bottom:.1rem;">
         <el-col :span="24">
           <div class="grid-content bg-purple-dark">
             <el-row>

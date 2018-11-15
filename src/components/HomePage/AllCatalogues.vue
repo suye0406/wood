@@ -122,7 +122,7 @@
       }
     },
     created(){
-      console.log(this.$store.state.category.all)
+      // console.log(this.$store.state.category.all)
       this.all = this.$store.state.category.all
       this.allpic = this.$store.state.category.allpic
       this.allTable = this.$store.state.category.allTable
