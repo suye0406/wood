@@ -104,7 +104,7 @@
                     </el-col>
                     <el-col :span="12">
                       <div class="grid-content bg-purple-light"style="background-color: black;">
-                        <span style="text-align: center;line-height: .49rem;color:white;font-size: .1rem;"@click="Addcart({id:data.id,name:data.title,price:data.price,num:data.num,color:color,style:style})">加入购物车</span>
+                        <span style="text-align: center;line-height: .49rem;color:white;font-size: .1rem;"@click="Addcart({id:data.id,name:data.title,price:data.price,num:data.num,color:color,style:style,img:data.img})">加入购物车</span>
                       </div>
                     </el-col>
                   </el-row>

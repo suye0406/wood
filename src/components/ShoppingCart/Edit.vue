@@ -36,27 +36,27 @@
                         <!--<div>-->
                           <!--<span>新品特惠</span>-->
                         <!--</div>-->
-                        <el-row v-for="(item,index) in shoop">
+                        <el-row v-for="(item,index) in shoop"style="margin-bottom: .3rem;">
                           <el-col :span="9">
-                            <div class="grid-content bg-purple d1">
+                            <div class="grid-content bg-purple d1"style="margin-left: .1rem;margin-top: .3rem;">
                               <div></div>
                               <div>
-                                <img :src="item.img" height="50%" width="100%"/>
+                                <img :src="item.img[0]" height="50%" width="100%"/>
                               </div>
                               <div>
-                                <span>{{item.title}}</span>
+                                <span>新品特惠</span>
                               </div>
                             </div>
                           </el-col>
                           <el-col :span="15">
-                            <div class="grid-content bg-purple-light d2">
+                            <div class="grid-content bg-purple-light d2"style="margin-left: .1rem">
                               <div>
-                                <p>{{item.title}}</p>
-                                <p>{{item.title2}}</p>
-                                <p>{{item.title3}}</p>
+                                <p style="font-size: .12rem;">{{item.name}}</p>
+                                <p style="font-size: .12rem;">{{item.style}}</p>
+                                <p></p>
                                 <p>
-                                  <span>￥{{item.price}}</span>
-                                  <span>x{{item.num}}</span>
+                                  <span style="font-size: .12rem;">￥{{item.price*item.num}}</span>
+                                  <span style="font-size: .12rem;">x{{item.num}}</span>
                                 </p>
                               </div>
                             </div>
@@ -73,7 +73,7 @@
       </el-row>
       <el-row>
         <el-col :span="24"style="position: fixed;bottom: 0">
-          <div class="grid-content bg-purple-dark boot">
+          <div class="grid-content bg-purple-dark boot"style="background-color: white;">
             <el-row>
               <el-col :span="5">
                 <div class="grid-content bg-purple"style="display: flex;justify-content: space-between;">
@@ -103,6 +103,7 @@
 </template>
 
 <script>
+  import Vuex from 'vuex';
     export default {
         name: "Edit",
       data(){
@@ -141,8 +142,14 @@
             // this.shoop = newVal,"-------"
         }
       },
+      computed:{
+        // ...Vuex.mapState({
+        //   shooping:state=>state.cart.shooping,
+        // })
+      },
       created(){
-          this.shoop = this.$store.state.cart.cart;
+          console.log(this.$store.state.cart.shoop)
+          this.shoop = this.$store.state.cart.shoop;
       },
     }
     function addStorage(key,value){
