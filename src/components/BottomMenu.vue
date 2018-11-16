@@ -174,8 +174,8 @@
         <img :src="'/home'===$route.path?tabBarImg[0].selected:tabBarImg[0].normal"/>
         <p>首页</p>
       </div>
-      <div class="col-lg-3" @click="switchTo('/category')">
-        <img :src="'/category'===$route.path?tabBarImg[1].selected:tabBarImg[1].normal"/>
+      <div class="col-lg-3" @click="switchTo('/ification')">
+        <img :src="'/ification'===$route.path?tabBarImg[1].selected:tabBarImg[1].normal"/>
         <p>分类</p>
       </div>
       <div class="col-lg-3" @click="switchTo('/cart')">

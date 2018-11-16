@@ -9,7 +9,7 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide"v-for="(item,index) in twosowingmap">
             <!--<router-link to="/details">-->
-              <img :src="item.img[0]" alt=""width="100%"height="100%"@click="send(index)">
+              <img :src="item.img[0]" alt=""width="100%"height="100%"@click="send(item.id)">
             <!--</router-link>-->
             <p class="col-lg-12 p1">
               <span>{{item.title}}</span>
@@ -41,9 +41,9 @@
       console.log(this.twosowingmap)
     },
     methods:{
-      send(index){
-        console.log(index)
-        this.$router.push({name: 'Details', params: {id: index}})
+      send(id){
+        console.log(id)
+        this.$router.push({name: 'Details', params: {id: id}})
         // location.href = "#/details"
       }
     },

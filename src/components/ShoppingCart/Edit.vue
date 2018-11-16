@@ -3,7 +3,7 @@
       <el-row>
         <el-col :span="24">
           <div class="grid-content bg-purple-dark header">
-            <router-link to="/home">
+            <router-link to="/home"style="color: black;">
               <div class="el-icon-arrow-left"></div>
             </router-link>
             <div class="">购物车</div>
@@ -312,3 +312,17 @@
     }
   }
 </style>
+<!--
+  cart:[
+    {
+      img:'../../../static/img/COFA精致沙发.d4fbc3f.png',
+      it:'新品特惠',
+      title:'飞鸟沙发',
+      title2:'玫红，单人座',
+      title3:'2018-11-18',
+      price:'6500',
+      num:'1',
+    },
+  ],
+
+-->
