@@ -29,19 +29,30 @@ const state = {
 
     },
   ],
+  shoop:[],
   toggle:true,
   toggle3:false,
 }
 
 const mutations = {
   shop(state,params){
-    state.cart.push({it:params});
+    // state.cart.push({it:params});
     console.log( state.cart);
     // alert(2);
   },
   toggle1(state,params){
     state.toggle = false;
-    console.log(state.toggle)
+    state.toggle3 = true;
+    // console.log(state.toggle,state.toggle3)
+  },
+  toggle2(state,params){
+    state.toggle3 = false;
+    state.toggle = true;
+    console.log(state.toggle3,state.toggle)
+  },
+  Addcart(state,params){
+    state.shoop.push(params);
+    console.log(state.shoop)
   }
 }
 
@@ -52,6 +63,12 @@ const actions = {
   },
   toggle1({commit},params){
     commit("toggle1",params);
+  },
+  toggle2({commit},params){
+    commit("toggle2",params)
+  },
+  Addcart({commit},params){
+    commit("Addcart",params);
   },
 }
 const getters = {
@@ -67,18 +84,3 @@ export default {
   getters,
 
 };
-
-/*
-    getters:计算属性  数据放在缓存   只要state里面的数据发生改变那么getter里面的方法就会被执行
-
-    辅助函数
-        mapGetters()
-
-
-    modules:模块   作用是将所以的数据进行模块的拆分 而不是放在一个store里面这样不方便管理
-
-    注意在每个小模块导出的时候一定要去加命名空间 namespaced=true  这样就不会出现命名冲突
-    如果想要调用小模块里面的方法  则需要加上小模块的名称
-        例如
-         handleAdd:"goodsStore/handleAdd"
-*/

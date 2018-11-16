@@ -13,7 +13,17 @@ export default {
       price:'2185',
       content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
       path:'/404',
-      num:1
+      num:1,
+      style:[
+        '单人沙发',
+        '双人沙发',
+        '三人沙发',
+      ],
+      color:[
+        '黑色',
+        '红色',
+        '灰色',
+      ],
     },
     {
       id:'1',
@@ -28,7 +38,17 @@ export default {
       price:'2185',
       content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
       path:'/404',
-      num:1
+      num:1,
+      style:[
+        '单人沙发',
+        '双人沙发',
+        '三人沙发',
+      ],
+      color:[
+        '黑色',
+        '红色',
+        '灰色',
+      ],
     },
     {
       id:'2',
@@ -43,7 +63,17 @@ export default {
       price:'2185',
       content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
       path:'/404',
-      num:1
+      num:1,
+      style:[
+        '单人沙发',
+        '双人沙发',
+        '三人沙发',
+      ],
+      color:[
+        '黑色',
+        '红色',
+        '灰色',
+      ],
     },
     {
       id:'3',
@@ -58,7 +88,17 @@ export default {
       price:'2185',
       content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
       path:'/404',
-      num:1
+      num:1,
+      style:[
+        '单人沙发',
+        '双人沙发',
+        '三人沙发',
+      ],
+      color:[
+        '黑色',
+        '红色',
+        '灰色',
+      ],
     },
     {
       id:'4',
@@ -73,7 +113,17 @@ export default {
       price:'2185',
       content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
       path:'/404',
-      num:1
+      num:1,
+      style:[
+        '单人沙发',
+        '双人沙发',
+        '三人沙发',
+      ],
+      color:[
+        '黑色',
+        '红色',
+        '灰色',
+      ],
     },
     {
       id:'5',
@@ -88,7 +138,17 @@ export default {
       price:'2185',
       content:'耸立木作，超大净坐宽，构建空间轮廓，来自日本KeijiAshizawa',
       path:'/404',
-      num:1
+      num:1,
+      style:[
+        '单人沙发',
+        '双人沙发',
+        '三人沙发',
+      ],
+      color:[
+        '黑色',
+        '红色',
+        '灰色',
+      ],
     },
   ],
   newmap:[

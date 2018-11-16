@@ -1,5 +1,5 @@
 <template>
-  <div id="Details"style="height: 100%;">
+  <div id="Details"style="height: 100%;margin-bottom: .3rem;">
     <div v-show="toggle_x">
       <el-row>
         <el-col :span="24">
@@ -52,8 +52,11 @@
               </el-col>
               <el-col :span="4">
                 <div class="grid-content bg-purple-light">
-                  <div style="width: .16rem;height: .14rem;float: right;margin-right: .2rem;">
-                    <img src="../../../static/img/二倍率icon切图/heart@2x.png" height="100%" width="100%"/>
+                  <div style="width: .16rem;height: .14rem;float: right;margin-right: .2rem;"@click="dxin"v-show="xin">
+                    <img src="../../../static/img/二倍率icon切图/heart@2x.png" height="100%" width="100%">
+                  </div>
+                  <div style="width: .16rem;height: .14rem;float: right;margin-right: .2rem;"@click="dxin2"v-show="xin2">
+                    <img src="../../../static/img/二倍率icon切图/heart0@2x.png" height="100%" width="100%">
                   </div>
                 </div>
               </el-col>
@@ -116,7 +119,7 @@
               </el-col>
               <el-col :span="8">
                 <div class="grid-content bg-purple"style="background-color: black;">
-                  <span style="font-weight: bold;font-size: .12rem;line-height: .49rem;color: white;" @click="shop('123')">加入购物车</span>
+                  <span style="font-weight: bold;font-size: .12rem;line-height: .49rem;color: white;" @click="shop()">加入购物车</span>
                 </div>
               </el-col>
             </el-row>
@@ -151,6 +154,8 @@
       return{
         data:[],
         shoop:[],
+        xin:false,
+        xin2:true,
         ts:[
           {
             item:'世界设计'
@@ -170,7 +175,6 @@
       }
     },
     created(){
-      console.log(this.$store)
       this.twosowingmap = this.$store.state.category.twosowingmap;
       // console.log(this.twosowingmap[this.id])
       this.data = this.twosowingmap[this.id];
@@ -229,6 +233,14 @@
       })
     },
     methods:{
+      dxin(){
+        this.xin = false;
+        this.xin2 = true;
+      },
+      dxin2(){
+        this.xin2 = false;
+        this.xin = true;
+      },
       ...Vuex.mapActions({
         shop:"cart/shop",
         toggle1:"cart/toggle1",

@@ -10,11 +10,23 @@ import BindCellPhone from '@/components/My/BindCellPhone'
 import About from '@/components/My/About'
 import Address from '@/components/My/Address'
 import Personal from '@/components/My/Personal'
+import Allset from '@/components/My/allset/allset'
+import Snitch from '@/components/My/allset/snitch/snitch'
 import Cart from '@/components/ShoppingCart/Cart'
 import Edit from '@/components/ShoppingCart/Edit'
 import Edit2 from '@/components/ShoppingCart/Edit2'
 import Details from '@/components/Details/Details'
 import ClassIfication from '@/components/ClassIfication/ClassIfication'
+
+
+//2.0
+import Unpay from '../components/order/unpay-app.vue'
+import Pay from '../components/order/pay-app.vue'
+import Finished from '../components/order/finished-app.vue'
+import Other from '../components/order/other-app.vue'
+import ConfirmOrder from '../components/order/comfirmOrder.vue'
+import Account from '../components/order/account.vue'
+
 
 Vue.use(Router)
 
@@ -95,6 +107,48 @@ export default new Router({
       name: 'ClassIfication',
       component: ClassIfication
     },
+    {
+      path: '/allset',
+      name: 'Allset',
+      component: Allset
+    },
+    {
+      path: '/snitch',
+      name: 'Snitch',
+      component: Snitch
+    },
+
+  //  2.0
+    {
+      path: '/unpay',
+      name: 'Unpay',
+      component: Unpay
+    },
+    {
+      path: '/pay',
+      name: 'Pay',
+      component: Pay
+    },
+    {
+      path: '/finished',
+      name: 'Finished',
+      component: Finished
+    },
+    {
+      path: '/other',
+      name: Other,
+      component: Other
+    },
+    {
+      path: '/confirmOrder',
+      name: ConfirmOrder,
+      component: ConfirmOrder
+    },
+    {
+      path: '/account',
+      name: Account,
+      component: Account
+    }
   ]
 })
 

@@ -63,7 +63,7 @@
           },
           {
             pic:'../../../static/img/二倍率icon切图/other@2x.png',
-            tp:'其他渠道'
+            tp:'channels'
           }
         ],
         menu:[
