@@ -4,7 +4,10 @@
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
     font-family: '楷体';
+=======
+>>>>>>> 031ea67665af0078ae4b4a7f12785d3e1eb91e13
 }
 
 
@@ -138,7 +141,10 @@ a {border: none;-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight
 
 html{
     font-size: 31.25vw;
+<<<<<<< HEAD
     /*font-size: 26.67vw;*/
+=======
+>>>>>>> 031ea67665af0078ae4b4a7f12785d3e1eb91e13
 }eeee
 html,body{
     width: 100%;

@@ -102,7 +102,14 @@
           }
           span:nth-child(2){
             float: right;
+<<<<<<< HEAD
             margin-right: .16rem;
+=======
+<<<<<<< HEAD
+            margin-right: .16rem;
+=======
+>>>>>>> 856c9218d243e301c9b590a66abb97da25035c3b
+>>>>>>> 031ea67665af0078ae4b4a7f12785d3e1eb91e13
             font-size: .14rem;
             color: #E26C6C;
             line-height: .2rem;
@@ -110,7 +117,16 @@
         }
         .p2{
           line-height: .17rem;
+<<<<<<< HEAD
           /*margin-top: .3rem;*/
+=======
+<<<<<<< HEAD
+          /*margin-top: .3rem;*/
+=======
+          margin-top: 0.03rem;
+          text-align: left;
+>>>>>>> 856c9218d243e301c9b590a66abb97da25035c3b
+>>>>>>> 031ea67665af0078ae4b4a7f12785d3e1eb91e13
           color: #999999;
           text-align: left;
           margin: 0 auto;

@@ -8,6 +8,7 @@ import BindingCell from '@/components/My/BindingCell'
 import My from '@/components/My/My'
 import BindCellPhone from '@/components/My/BindCellPhone'
 import About from '@/components/My/About'
+<<<<<<< HEAD
 import Address from '@/components/My/Address'
 import Personal from '@/components/My/Personal'
 import Allset from '@/components/My/allset/allset'
@@ -27,6 +28,14 @@ import Other from '../components/order/other-app.vue'
 import ConfirmOrder from '../components/order/comfirmOrder.vue'
 import Account from '../components/order/account.vue'
 
+=======
+<<<<<<< HEAD
+import Address from '@/components/My/Address'
+
+=======
+import Category from '@/components/Category/Category'
+>>>>>>> 856c9218d243e301c9b590a66abb97da25035c3b
+>>>>>>> 031ea67665af0078ae4b4a7f12785d3e1eb91e13
 
 Vue.use(Router)
 
@@ -62,6 +71,11 @@ export default new Router({
       name: 'BindCellPhone',
       component: BindCellPhone
     },
+     {
+    	path:"/category",
+    	name:"Category",
+    	component:Category
+    },
     {
       path: '/my',
       name: 'My',
@@ -72,11 +86,13 @@ export default new Router({
       name: 'About',
       component: About
     },
+<<<<<<< HEAD
     {
         path: '/address',
         name: 'Address',
         component: Address
       },
+<<<<<<< HEAD
     {
         path: '/personal',
         name: 'Personal',
@@ -149,6 +165,18 @@ export default new Router({
       name: Account,
       component: Account
     }
+=======
+
+=======
+
+
+>>>>>>> 856c9218d243e301c9b590a66abb97da25035c3b
+    // {
+    //   path:'/address',
+    //   name:'Address',
+    //   component:Address
+    // }
+>>>>>>> 031ea67665af0078ae4b4a7f12785d3e1eb91e13
   ]
 })
 
@@ -159,6 +187,7 @@ export default new Router({
     绑定手机号-----’/cell‘
     绑定邮箱-------’/bindcellphone‘
     我的---------’/my‘
+  商品分类 --------'/category(2018-11-12)'
 
     admin
     后台商品管理------’/admin‘
